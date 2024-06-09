@@ -24,7 +24,7 @@ def plot_metric_for_multiple_models(
     ), "Incorrect metric name(s) passed as parameter"
 
     num_metrics = len(metric_names)
-    fig, axs = plt.subplots(ncols=2, figsize=(14, 6))
+    fig, axs = plt.subplots(ncols=2, figsize=(20, 8))
 
     for i, metric_name in enumerate(metric_names):
         ax = axs[i] if num_metrics > 1 else axs  # Handle single metric case
@@ -42,9 +42,9 @@ def plot_metric_for_multiple_models(
             )
         ax.set_xlabel("Epochs")
         ax.set_title(f"{metric_name} across epochs")
-        ax.legend(loc="upper right", bbox_to_anchor=(1.4, 1))
+        ax.legend(loc="upper right", bbox_to_anchor=(1.3, 1))
         ax.set_xlim(1, num_training_epochs)
-        ax.set_xticks(ticks=range(1, num_training_epochs + 1))
+        ax.set_xticks(ticks=range(5, num_training_epochs + 1, 5))
         ax.grid(True)
 
     plt.tight_layout()
