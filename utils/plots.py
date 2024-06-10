@@ -42,7 +42,7 @@ def plot_metric_for_multiple_models(
             )
         ax.set_xlabel("Epochs")
         ax.set_title(f"{metric_name} across epochs")
-        ax.legend(loc="upper right", bbox_to_anchor=(1.3, 1))
+        ax.legend(loc="upper right", bbox_to_anchor=(1.4, 1))
         ax.set_xlim(1, num_training_epochs)
         ax.set_xticks(ticks=range(5, num_training_epochs + 1, 5))
         ax.grid(True)
